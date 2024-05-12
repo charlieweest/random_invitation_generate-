@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Invitation Code Generator</title>
+    <style>
+        body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.generator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.code-display {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="generator-container">
+        <h1>Invitation Code Generator</h1>
+        <button onclick="generateCode()">Generate Code</button>
+        <div id="codeDisplay" class="code-display"></div>
+    </div>
+    <script>
+function generateCode() {
+    const codes = [
+        "m1hXBn", "FO61gU", "NL9jZP", "mefuOLk",
+        "Ie2GON", "l8I0Bp", "eNkWDE", "rQUdYx",
+        "UhbmpL", "InhrO", "Hkmz3c", "vGUDjm","mm4pfN", "tGy1hf", "XJ4CcR",
+        "A6b337", "6adSTa", "xOGgtf", "y8dxsT", "neXuSq"
+    ];
+    // Generate a random index to pick a code from the array
+    const randomIndex = Math.floor(Math.random() * codes.length);
+    const selectedCode = codes[randomIndex];
+    document.getElementById('codeDisplay').innerText = selectedCode;
+}
+
+    </script>
+</body>
+</html>
